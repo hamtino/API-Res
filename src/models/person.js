@@ -1,13 +1,9 @@
 import Sequelize from "sequelize";
 import { sequelize } from "../database/database"
 
-const Person = sequelize.define('person', {
-    id: {
-        type: Sequelize.INTEGER,
-        primaryKey: true
-    },
+const Person = sequelize.define('personas', {
     fullname: {
-        type: Sequelize.TEXT
+        type: Sequelize.STRING
     },
     birth: {
         type: Sequelize.DATE

@@ -1,5 +1,6 @@
 import Sequelize from "sequelize";
 
+
 export const sequelize = new Sequelize(
     'postgres',
     'postgres',
@@ -16,3 +17,4 @@ export const sequelize = new Sequelize(
         logging: false
     }
 )
+
