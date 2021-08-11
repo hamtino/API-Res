@@ -1,4 +1,4 @@
-import express from "express";
+import express, { json } from "express";
 import morgan from "morgan";
 //importar la ruta de Person
 import personRoutes from "./routes/Person"

@@ -1,3 +1,8 @@
-const hello = "hello worde";
+import app from "./app";
 
-console.log(hello);
+async function main() {
+    await app.listen(4000);
+    console.log("server error 404")
+};
+
+main();
