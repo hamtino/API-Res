@@ -76,6 +76,27 @@ export async function deletePerson(req, res) {
         })
     }
 }
+
+export async function updatePerson(req, res) {
+    try {
+        const { id } = req.params;
+        const upPerson = await Person.update(req.body, {
+            where: {
+                id
+            }
+        });
+        res.json({
+            message: 'datos actualizados correctamente',
+            data: upPerson
+        });
+        
+    } catch (error) {
+        res.status(500).json({
+            message: 'error interno del servidor',
+            data: {}
+        })
+    }
+}
         
        
 
