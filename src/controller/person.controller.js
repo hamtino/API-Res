@@ -21,10 +21,16 @@ export async function createPerson(req, res) {
             data: {}
         })
     }
-    
+}
+
+export async function getPerson(req, res) {
+    const person = await Person.findAll();
+    res.json({
+        data: person
+    });
+}
         
        
 
 
     
-}

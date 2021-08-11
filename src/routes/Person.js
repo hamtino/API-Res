@@ -1,7 +1,8 @@
 import { Router } from "express";
 const router = Router();
-import { createPerson } from "../controller/person.controller"
+import { createPerson, getPerson } from "../controller/person.controller"
 
 router.post('/', createPerson)
+router.get('/', getPerson)
 
 export default router;
